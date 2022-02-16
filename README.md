@@ -1,8 +1,8 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h4 align="center" style="color:red;">LARAVEL JETSTREAM CMS</h4>
 
 ## About Laravel Jetstream CMS
 
-Laravel Jetstream CMS (Version: 1.0) is a content management system build with Laravel, Fortify, Jetstream, Livewire and Tailwind Css. Dependencies:
+Laravel Jetstream CMS (Version: 1.0) is a content management system build with Laravel, Jetstream, Livewire and Tailwind Css and Alpin js.
 
 - [Larave 8.x](https://laravel.com/docs/8.x/installation).
 - [Jetstream 2.x](https://jetstream.laravel.com/2.x/introduction.html).
