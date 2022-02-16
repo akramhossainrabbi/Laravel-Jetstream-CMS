@@ -55,7 +55,7 @@ Jetstream's team scaffolding and opinions may not work for every application. If
 ```
 
 
-2 **Now comment out** ```Features::teams(['invitations' => true])``` **this line of code**
+2. **Now comment out** ```Features::teams(['invitations' => true])``` **this line of code**
 ```
     /*
     |--------------------------------------------------------------------------
