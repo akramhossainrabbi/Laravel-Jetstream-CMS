@@ -68,7 +68,7 @@ Jetstream's team scaffolding and opinions may not work for every application. If
         // Features::termsAndPrivacyPolicy(),
         Features::profilePhotos(),
         // Features::api(),
-        Features::teams(['invitations' => true]),
+        //Features::teams(['invitations' => true]),
         Features::accountDeletion(),
     ],
 ```
