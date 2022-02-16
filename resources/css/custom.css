@@ -1,0 +1,36 @@
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(253, 252, 252);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 4px 2px 25px -3px;
+}
+  
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+[x-cloak] { display: none; }
+.dropdown:focus-within .dropdown-menu {
+    opacity:1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+}
+
+.flickity-button {
+    background: #373593;
+    color: white;
+}
+
+.flickity-button:hover {
+    background: #2e2d7e;
+}
