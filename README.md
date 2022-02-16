@@ -32,7 +32,7 @@ The dependencies requires PHP 7.4 or higher.
 Jetstream's team scaffolding and opinions may not work for every application. If it doesn't work for your use case, feel free to turn off team functionality. To turn off, all you need to do is:
 
 
-* **Go to**```config/jetstream.php``` **and scroll down to** ```Features``` **section**
+1. **Go to**```config/jetstream.php``` **and scroll down to** ```Features``` **section**
 ```
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ Jetstream's team scaffolding and opinions may not work for every application. If
 ```
 
 
-* **Now comment out** ```Features::teams(['invitations' => true])``` **this line of code**
+2 **Now comment out** ```Features::teams(['invitations' => true])``` **this line of code**
 ```
     /*
     |--------------------------------------------------------------------------
