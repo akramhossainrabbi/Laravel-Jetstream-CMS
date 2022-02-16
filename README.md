@@ -76,3 +76,7 @@ Jetstream's team scaffolding and opinions may not work for every application. If
         Features::accountDeletion(),
     ],
 ```
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
