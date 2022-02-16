@@ -79,4 +79,4 @@ Jetstream's team scaffolding and opinions may not work for every application. If
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel Jetstream CMS is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
