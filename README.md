@@ -29,9 +29,9 @@ The dependencies requires PHP 7.4 or higher.
 
 ## Jetstream Teams
 
-Jetstream's team scaffolding and opinions may not work for every application. If it doesn't work for your use case, feel free to turn off team functionality. To turn off, all you need to do is go to ```config/jetstream.php``` and scroll down to ```Features``` section. Now comment out ```Features::teams(['invitations' => true])``` this line.
+Jetstream's team scaffolding and opinions may not work for every application. If it doesn't work for your use case, feel free to turn off team functionality. To turn off, all you need to do is:  and scroll down to ```Features``` section. Now comment out ```Features::teams(['invitations' => true])``` this line.
 
-* **Step one**
+* **Go to ```config/jetstream.php```**
 ```
     /*
     |--------------------------------------------------------------------------
