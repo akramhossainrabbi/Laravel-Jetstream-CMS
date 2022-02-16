@@ -10,10 +10,19 @@ Laravel Jetstream CMS (Version: 1.0) is a content management system build with L
 - [Tailwind CSS 2.x](https://v2.tailwindcss.com/docs).
 - [Alpine js 3.x](https://alpinejs.dev).
 
+## Requirements
+The dependencies requires PHP 7.4 or higher.
+
 
 ## Installation
 
 - Clone or Download ZIP
-- Open your command line
-- Change Directory to Laravel Jetstream CMS
+- Go to the folder application using ```cd``` command on your cmd or terminal
 - Run ```composer install```
+- Copy ```.env.example``` file to ```.env``` on the root folder. You can type copy ```.env.example .env``` if using command prompt Windows or ```cp .env.example .env``` if using terminal, Ubuntu
+- Open your ```.env``` file and change the database name (```DB_DATABASE```) to whatever you have, username (```DB_USERNAME```) and password (```DB_PASSWORD```) field correspond to your configuration.
+- Run ```php artisan key:generate```
+- Run ```php artisan migrate```
+- Run ```php artisan db:seed```
+- Run ```php artisan serve```
+- Go to http://localhost:8000/
