@@ -1,4 +1,4 @@
-<h4 align="center" style="color:red;">LARAVEL JETSTREAM CMS</h4>
+<h1 align="center" style="color:red;">LARAVEL JETSTREAM CMS</h1>
 
 ## About Laravel Jetstream CMS
 
