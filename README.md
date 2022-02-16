@@ -26,3 +26,7 @@ The dependencies requires PHP 7.4 or higher.
 - Run ```php artisan db:seed```
 - Run ```php artisan serve```
 - Go to http://localhost:8000/
+
+## Jetstream Teams
+
+Jetstream's team scaffolding and opinions may not work for every application. If it doesn't work for your use case, feel free to turn off team team functionality. To turn off all you need to do is go to ```config/jetstream.php``` and scroll down to ```Features``` section. Now comment out ```Features::teams(['invitations' => true])``` this line.
