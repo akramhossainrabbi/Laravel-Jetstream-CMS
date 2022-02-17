@@ -11,9 +11,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
-        {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
-        {{-- <link href="https://unpkg.com/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet"> --}}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind-dark.min.css">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @yield('css')
 
         @livewireStyles
@@ -60,8 +58,7 @@
         @livewireScripts
 
         <!-- Scripts -->
-        {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
         <script>
           const setup = () => {
             const getTheme = () => {
