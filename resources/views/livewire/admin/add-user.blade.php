@@ -74,7 +74,7 @@
                     </td>
                     <td class="px-4 py-3 text-sm">{{ $user->email }}</td>
                     <td class="px-4 py-3 text-xs">
-                        <button wire:click="delete({{ $user->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
+                        <button wire:click="deleteConfirm({{ $user->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
                     </td>
                     </tr>
                 @endforeach

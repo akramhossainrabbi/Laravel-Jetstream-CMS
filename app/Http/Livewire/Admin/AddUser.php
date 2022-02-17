@@ -18,6 +18,8 @@ class AddUser extends Component
     use PasswordValidationRules;
     use WithPagination;
 
+    protected $listeners = ['delete'];
+
     /**
      * Validate and create a newly registered user.
      *
@@ -41,7 +43,12 @@ class AddUser extends Component
         $user->roles()->attach('1');
 
         $this->createTeam($user);
-        $this->reset();
+
+        $this->dispatchBrowserEvent('swal:modal', [
+            'type' => 'success',
+            'title' => 'Record added successfully?',
+            'text' => '',
+        ]);
     }
 
     /**
@@ -57,6 +64,22 @@ class AddUser extends Component
             'name' => explode(' ', $user->name, 2)[0]."'s Team",
             'personal_team' => true,
         ]));
+    }
+
+    /**
+     * Delete confirmation.
+     *
+     * @param  mixed  $user
+     * @return void
+     */
+    public function deleteConfirm($id)
+    {
+        $this->dispatchBrowserEvent('swal:confirm', [
+            'type' => 'warning',
+            'title' => 'Are you sure?',
+            'text' => '',
+            'id' => $id,
+        ]);
     }
 
     /**
