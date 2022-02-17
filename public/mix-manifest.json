@@ -6,6 +6,7 @@
     "/css/flickity.min.css": "/css/flickity.min.css",
     "/js/jquery.js": "/js/jquery.js",
     "/js/custom.js": "/js/custom.js",
+    "/js/flickity.pkgd.min.js": "/js/flickity.pkgd.min.js",
     "/js/sweetalert.min.js": "/js/sweetalert.min.js",
     "/ckeditor/CONTRIBUTING.md": "/ckeditor/CONTRIBUTING.md",
     "/ckeditor/LICENSE.md": "/ckeditor/LICENSE.md",

@@ -24,7 +24,10 @@
     <div class="py-10 px-4">
         <div class="rounded shadow bg-white dark:bg-gray-800 dark:text-gray-900">
             <div class="p-4">
-                <h3 class="text-2xl font-bold dark:text-gray-100">All pages</h3>              
+                <div class="w-full px-2 flex items-center justify-between">
+                  <h3 class="text-2xl font-bold dark:text-gray-100">All pages</h3>
+                  <a href="{{ route('admin.pages.create') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-1 px-2 border border-gray-500 rounded">Add Page</a>
+                </div>              
                 <div class="w-full overflow-hidden rounded-lg shadow-xs">
                     <div class="w-full overflow-x-auto">
                       <table class="w-full">
@@ -51,8 +54,4 @@
             </div>
         </div>
     </div>
-
-    @push('scripts')
-    @include('admin.ckeditor')
-    @endpush
 </x-app-layout>

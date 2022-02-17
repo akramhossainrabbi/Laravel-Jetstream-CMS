@@ -34,7 +34,7 @@
         </style>
 
         <div x-data="setup()" :class="{ 'dark': isDark }">
-            <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+            <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white antialiased">
                 @livewire('navigation-menu')
 
                 <!-- Page Heading -->

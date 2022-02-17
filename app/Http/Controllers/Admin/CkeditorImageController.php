@@ -4,16 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\AboutUs;
+use App\Models\Pages;
 
 class CkeditorImageController extends Controller
 {
     public function store()
     {
-        $about = new AboutUs();
-        $about->id = 0;
-        $about->exists = true;
-        $image = $about->addMediaFromRequest('upload')->toMediaCollection('images');
+        $page = new Pages();
+        $page->id = 0;
+        $page->exists = true;
+        $image = $page->addMediaFromRequest('upload')->toMediaCollection('images');
 
         return response()->json([
             'url' => $image->getUrl()
