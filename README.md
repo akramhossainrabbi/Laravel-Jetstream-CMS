@@ -77,6 +77,14 @@ Jetstream's team scaffolding and opinions may not work for every application. If
     ],
 ```
 
+## Admin Loging
+
+*Username: ```admin@mail.com```
+*Password: ```password```
+
+Note: You can change the username and password from ```database/seeders/UserSeeder.php``` before seeding database.
+
+
 ## License
 
 The Laravel Jetstream CMS is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
