@@ -79,8 +79,8 @@ Jetstream's team scaffolding and opinions may not work for every application. If
 
 ## Admin Loging
 
-*Username: ```admin@mail.com```
-*Password: ```password```
+- Username: ```admin@mail.com```
+- Password: ```password```
 
 Note: You can change the username and password from ```database/seeders/UserSeeder.php``` before seeding database.
 
