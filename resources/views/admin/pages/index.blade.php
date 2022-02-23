@@ -1,20 +1,4 @@
 <x-app-layout>
-    @section('css')
-    <style>
-        h1{
-            font-size: 2em;
-            font-weight: bolder;
-        }
-        h2{
-            font-size: 1.5em;
-            font-weight: bolder;
-        }
-        h3{
-            font-size: 1.17em;
-            font-weight: bolder;
-        }
-    </style>
-    @endsection
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Pages') }}
@@ -38,15 +22,23 @@
                           </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                          @foreach($pages as $page)
                           <tr class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
                             <td class="px-4 py-3">
-                              <p class="font-semibold">This is a title</p>
+                              <p class="font-semibold">{{ $page->title }}</p>
                             </td>
                             <td class="px-4 py-3 text-xs">
-                                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded">Edit</button>
-                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
+                                <a href="{{ route('admin.pages.show', $page->id) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 border border-yellow-500 rounded">View</a>
+                                <a href="{{ route('admin.pages.edit', $page->id) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded">Edit</a>
+                                <form class="inline-block relative" action="{{ route('admin.pages.destroy', $page->id) }}" method="POST">
+                                  @csrf
+
+                                  @method('DELETE')
+                                  <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
+                              </form>
                             </td>
                           </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>

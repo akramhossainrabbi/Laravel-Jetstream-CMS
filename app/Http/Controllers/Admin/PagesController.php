@@ -15,7 +15,11 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.index');
+        // Get all pages
+        $pages = Pages::all();
+
+        // Load the view and pass the pages
+        return view('admin.pages.index')->with('pages', $pages);
     }
 
     /**
@@ -25,6 +29,7 @@ class PagesController extends Controller
      */
     public function create()
     {
+        // Load the create form from (resource/views/admin/pages/pages.blade.php)
         return view('admin.pages.create');
     }
 
@@ -36,7 +41,10 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
+        // Storing data from the Request 
         Pages::create($request->all());
+
+        // Redirecting to index view
         return redirect()->route('admin.pages.index');
     }
 
@@ -46,9 +54,10 @@ class PagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pages $page)
     {
-        //
+        // show the view and pass the page to it
+        return view('admin.pages.show')->with('page', $page);
     }
 
     /**
@@ -57,9 +66,10 @@ class PagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pages $page)
     {
-        //
+        // show the edit and pass the page to it
+        return view('admin.pages.edit')->with('page', $page);
     }
 
     /**
@@ -69,9 +79,13 @@ class PagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pages $page)
     {
-        //
+        // Updating page
+        $page->update($request->all());
+
+        // Redirecting to index view
+        return redirect()->route('admin.pages.index');
     }
 
     /**
@@ -80,8 +94,12 @@ class PagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pages $page)
     {
-        //
+        // Deleting page 
+        $page->delete();
+
+        // Redirecting to index view
+        return redirect()->route('admin.pages.index');
     }
 }

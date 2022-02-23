@@ -22,6 +22,7 @@ if (mix.inProduction()) {
 }
 
 mix.copy('resources/css/custom.css', 'public/css/custom.css');
+mix.copy('resources/css/htag.css', 'public/css/htag.css');
 mix.copy('resources/css/ckeditor.css', 'public/css/ckeditor.css');
 mix.copy('resources/css/flickity.min.css', 'public/css/flickity.min.css');
 mix.copy('resources/js/jquery.js', 'public/js/jquery.js');
