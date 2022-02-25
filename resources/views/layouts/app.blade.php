@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html x-data="{ darkMode: localStorage.getItem('dark') === 'true'}"
+  x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+  x-bind:class="{ 'dark': darkMode }" 
+  lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,8 +16,15 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @yield('css')
-
         @livewireStyles
+
+        <script>
+          if (localStorage.getItem('dark') == 'true') {
+            document.documentElement.classList.add('dark')
+          }else{
+            document.documentElement.classList.remove('dark')
+          }
+        </script>
     </head>
     <body class="font-sans antialiased">
         <!-- component -->
@@ -33,7 +43,7 @@
             }
         </style>
 
-        <div x-data="setup()" :class="{ 'dark': isDark }">
+        <div>
             <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white antialiased">
                 @livewire('navigation-menu')
 
@@ -59,29 +69,6 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
-        <script>
-          const setup = () => {
-            const getTheme = () => {
-              if (window.localStorage.getItem('dark')) {
-                return JSON.parse(window.localStorage.getItem('dark'))
-              }
-              return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-            }
-      
-            const setTheme = (value) => {
-              window.localStorage.setItem('dark', value)
-            }
-      
-            return {
-              loading: true,
-              isDark: getTheme(),
-              toggleTheme() {
-                this.isDark = !this.isDark
-                setTheme(this.isDark)
-              },
-            }
-          }
-        </script>
         <script src="{{ mix('js/sweetalert.min.js') }}" defer></script>
         <script>
           window.addEventListener('swal:modal', event => {
